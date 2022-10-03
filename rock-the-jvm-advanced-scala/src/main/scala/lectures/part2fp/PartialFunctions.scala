@@ -82,5 +82,4 @@ object PartialFunctions extends App {
     case "call mom" => "Unable to find your phone without your credit card"
   }
   scala.io.Source.stdin.getLines().map(charbot).foreach(println)
-
 }
