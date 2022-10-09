@@ -87,7 +87,7 @@ object LazyEvaluation extends App {
 
     def #::[B >: A](element: B): MyStream[B] // prepend operator
 
-    def ++[B >: A](anotherStream: MyStream[B]): MyStream[B] // concatenate two streams
+    def ++[B >: A](anotherStream: => MyStream[B]): MyStream[B] // concatenate two streams
 
     def foreach(f: A => Unit): Unit
 
@@ -120,7 +120,7 @@ object LazyEvaluation extends App {
 
     def #::[B >: Nothing](element: B): MyStream[B] = new Cons(element, this)
 
-    def ++[B >: Nothing](anotherStream: MyStream[B]): MyStream[B] = anotherStream
+    def ++[B >: Nothing](anotherStream: => MyStream[B]): MyStream[B] = anotherStream
 
     def foreach(f: Nothing => Unit): Unit = ()
 
@@ -146,7 +146,7 @@ object LazyEvaluation extends App {
      */
     def #::[B >: A](element: B): MyStream[B] = new Cons(element, this)
 
-    def ++[B >: A](anotherStream: MyStream[B]): MyStream[B] = new Cons(head, tail ++ anotherStream)
+    def ++[B >: A](anotherStream: => MyStream[B]): MyStream[B] = new Cons(head, tail ++ anotherStream)
 
     def foreach(f: A => Unit): Unit = {
       f(head)

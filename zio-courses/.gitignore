@@ -8,5 +8,4 @@ dist
 .settings/
 /bin/
 logs
-#/zio-courses/.bsp/
-zio-courses/.idea/
+.bsp
