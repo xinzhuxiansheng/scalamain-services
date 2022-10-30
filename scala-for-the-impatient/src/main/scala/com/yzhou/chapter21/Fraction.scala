@@ -20,7 +20,7 @@ object Fraction {
   def apply(n: Int, d: Int) = new Fraction(n, d)
 }
 
-object Main extends App {
+object FractionMain extends App {
   //  println(Fraction(4, 5))
 
   implicit def int2Fraction(n: Int) = Fraction(n, 1)
@@ -34,7 +34,6 @@ object Main extends App {
     int2Fraction(n: Int)方法的形参n是Int类型，当在Main class声明时，
     scala会将该类下所有Int类型 调用int2Fraction函数转成Fraction(n,1)类型,
     并且 Fraction类型也 定义了 *()，所以 3 * Fraction(4,5) 调用的是Fraction的*()
-
   */
   val result = 3 * Fraction(4, 5) // 3 => Calls int2Fraction(3)
 
