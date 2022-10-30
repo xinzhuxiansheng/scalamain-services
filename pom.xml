@@ -11,6 +11,7 @@
     <modules>
         <module>scalamain-demo</module>
         <module>rock-the-jvm-advanced-scala</module>
+        <module>scala-for-the-impatient</module>
     </modules>
 
     <properties>
