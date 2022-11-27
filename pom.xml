@@ -13,6 +13,8 @@
         <module>rock-the-jvm-advanced-scala</module>
         <module>scala-for-the-impatient</module>
         <module>functional-programing-in-scala</module>
+        <module>alpakka-Kafka-example</module>
+        <module>leetcode-exercise</module>
     </modules>
 
     <properties>
