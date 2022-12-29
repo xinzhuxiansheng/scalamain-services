@@ -15,6 +15,7 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <scala.version>2.13.8</scala.version>
+        <scala.binary.version>2.13</scala.binary.version>
     </properties>
 
     <dependencies>
@@ -23,6 +24,33 @@
             <artifactId>scala-library</artifactId>
             <version>${scala.version}</version>
         </dependency>
+        <dependency>
+            <groupId>info.folone</groupId>
+            <artifactId>poi-scala_${scala.binary.version}</artifactId>
+            <version>0.22</version>
+        </dependency>
+        <dependency>
+            <groupId>com.softwaremill.sttp.client3</groupId>
+            <artifactId>core_${scala.binary.version}</artifactId>
+            <version>3.8.5</version>
+        </dependency>
+        <dependency>
+            <groupId>io.circe</groupId>
+            <artifactId>circe-core_${scala.binary.version}</artifactId>
+            <version>0.15.0-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.circe</groupId>
+            <artifactId>circe-parser_${scala.binary.version}</artifactId>
+            <version>0.15.0-M1</version>
+        </dependency>
+        <dependency>
+            <groupId>io.circe</groupId>
+            <artifactId>circe-generic_${scala.binary.version}</artifactId>
+            <version>0.15.0-M1</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>

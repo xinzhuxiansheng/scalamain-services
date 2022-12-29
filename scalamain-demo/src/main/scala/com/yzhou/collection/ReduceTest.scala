@@ -14,5 +14,6 @@ object ReduceTest extends App {
   val t2 = Traversable(range01: _*)
   println(s"t2: $t2")
   println(s"t2 size: ${t2.size}")
+  println(range01.reduce((acc, x) => acc + x))
   println(t2.reduce((acc, x) => acc + x))
 }

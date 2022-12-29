@@ -1,3 +1,13 @@
+该项目主要是学习Scala相关技术
+
+Log
+
+* 2022.12.25: 阅读《scala-with-cats》
+
+
+
+
+
 
 ## rock the jvm module
 1.advanced-scala

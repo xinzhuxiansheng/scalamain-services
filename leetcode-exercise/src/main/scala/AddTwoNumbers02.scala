@@ -1,10 +1,10 @@
 /*
   carry：10进制的10位数
+  sum % 10 取余
+  sum / 10 取十进制位的数
  */
 
 object AddTwoNumbers02 extends App {
-
-
   def addTwoNumbers(l1: ListNode, l2: ListNode): ListNode = {
     def iter(l1: ListNode, l2: ListNode, carry: Int): ListNode = {
       (l1, l2) match {
@@ -23,7 +23,6 @@ object AddTwoNumbers02 extends App {
         }
       }
     }
-
     iter(l1, l2, 0)
   }
 
