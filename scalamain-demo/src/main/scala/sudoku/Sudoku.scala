@@ -61,9 +61,9 @@ object Sudoku {
       )
     }
 
-    println(problem.map(row=> row.mkString(" ")).mkString("\n"))
+    //println(problem.map(row=> row.mkString(" ")).mkString("\n"))
 
-//    println(prettyString(problem))
-//    solve(problem)
+    println(prettyString(problem))
+    solve(problem)
   }
 }
