@@ -5,6 +5,12 @@ Log
 * 2022.12.25: 阅读《scala-with-cats》
 
 
+## Scala 生态
+Lightbend Stack：Akka、Akka Cluster、Akka Stream、Play、Lagom
+
+Typelevel Stack：Cats、Cats-effect 以及以此为基础的各种上层生态，比如 http-server：Tapir / Http4s，db-layer：Doobie、json：Circle、react-stream：Fs2
+
+ZIO Stack：ZIO-runtime 为基础的各类生态，如 zio-http、zio-json、zio-gprc、zio-stream
 
 
 
