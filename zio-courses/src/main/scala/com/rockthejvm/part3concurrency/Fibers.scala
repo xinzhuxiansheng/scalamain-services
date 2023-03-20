@@ -1,7 +1,7 @@
 package com.rockthejvm.part3concurrency
 
 import zio.*
-import com.rockthejvm.utils.*
+import com.rockthejvm.utils.debugThread
 
 import java.io.{File, FileWriter}
 

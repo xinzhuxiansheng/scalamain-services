@@ -15,6 +15,7 @@
         <module>functional-programing-in-scala</module>
         <module>alpakka-Kafka-example</module>
         <module>leetcode-exercise</module>
+        <module>scalamian-learning-akka</module>
     </modules>
 
     <properties>
