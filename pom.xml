@@ -11,6 +11,7 @@
     <modules>
         <module>scalamain-demo</module>
         <module>rock-the-jvm-advanced-scala</module>
+        <module>rock-the-jvm-akka-typed-essentials</module>
         <module>scala-for-the-impatient</module>
         <module>functional-programing-in-scala</module>
         <module>alpakka-Kafka-example</module>
