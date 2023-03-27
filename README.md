@@ -27,6 +27,9 @@ ZIO Stack：ZIO-runtime 为基础的各类生态，如 zio-http、zio-json、zio
 
 源仓库地址(该仓库版本非常老不建议直接clone): http://www.github.com/jasongoodwin/learning-akka
 
+### 
+
+
 ## 知识点
 
 **引用透明**    
@@ -71,7 +74,11 @@ https://underscore.io/books/scala-with-cats/
 
 https://typelevel.org/cats-effect/docs/getting-started
 
+### ScalaTest
+https://www.scalatest.org/user_guide/property_based_testing
 
+### ScalaCheck
+https://scalacheck.org/
 
 
 
