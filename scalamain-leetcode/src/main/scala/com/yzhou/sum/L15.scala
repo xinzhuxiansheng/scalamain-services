@@ -38,8 +38,10 @@ object L15 {
             while (left < right && sortArr(right) == sortArr(right - 1)) {
               right -= 1
             }
-          }
-          if (sum > 0) {
+            // 一定需要加
+            left += 1
+            right -= 1
+          } else if (sum > 0) {
             right -= 1
           } else {
             left += 1
