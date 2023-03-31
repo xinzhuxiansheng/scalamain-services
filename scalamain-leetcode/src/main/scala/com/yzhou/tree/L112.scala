@@ -46,7 +46,7 @@ object L112 {
    *
    */
   def buildTree(nums: Array[Option[Int]], i: Int): TreeNode = {
-    if (i > nums.length - 1 || nums(i) == None) {
+    if (  i > nums.length - 1 || nums(i) == None) {
       return null
     }
     var node = TreeNode(nums(i).get)
