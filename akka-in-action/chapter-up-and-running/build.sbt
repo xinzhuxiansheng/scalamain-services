@@ -1,12 +1,9 @@
 enablePlugins(JavaServerAppPackaging)
 
+ThisBuild / name := "chapter-up-and-running"
 ThisBuild / version := "0.1.0-SNAPSHOT"
 ThisBuild / scalaVersion := "2.13.10"
 
-lazy val root = (project in file("."))
-  .settings(
-    name := "chapter-up-and-running"
-  )
 
 libraryDependencies ++= {
   val akkaVersion = "2.6.19"
@@ -23,10 +20,10 @@ libraryDependencies ++= {
 }
 
 val AkkaHttpVersion = "10.2.9"
-
 libraryDependencies += "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion
 
 // Assembly settings
 mainClass in assembly := Some("com.goticks.Main")
 
 assemblyJarName in assembly := "goticks.jar"
+

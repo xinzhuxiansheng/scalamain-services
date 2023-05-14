@@ -82,5 +82,8 @@ https://www.scalatest.org/user_guide/property_based_testing
 ### ScalaCheck
 https://scalacheck.org/
 
+### Akka
+https://akka.io/
+
 
 
