@@ -43,7 +43,7 @@ object L112 {
   /**
    * 构建一个完全二叉树
    * [5,4,8,11,null,13,4,7,2,null,null,null,1]
-   *
+   * i 是 数组下标
    */
   def buildTree(nums: Array[Option[Int]], i: Int): TreeNode = {
     if (  i > nums.length - 1 || nums(i) == None) {
