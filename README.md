@@ -27,7 +27,9 @@ ZIO Stack：ZIO-runtime 为基础的各类生态，如 zio-http、zio-json、zio
 
 源仓库地址(该仓库版本非常老不建议直接clone): http://www.github.com/jasongoodwin/learning-akka
 
-### 
+### akka-in-action(《Akka实战》)
+请参考本仓库代码，做了版本升级
+原仓库地址（依赖偏旧）：https://github.com/RayRoestenburg/akka-in-action
 
 
 ## 知识点
