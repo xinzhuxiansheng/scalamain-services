@@ -16,3 +16,9 @@ lazy val up = (project in file("chapter-up-and-running"))
     name := "chapter-up-and-running"
   )
 
+lazy val futures     = project.in(file("chapter-futures"))
+
+lazy val remoting    = project.in(file("chapter-remoting"))
+
+lazy val structure   = project.in(file("chapter-structure"))
+
