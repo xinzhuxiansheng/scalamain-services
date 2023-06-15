@@ -14,7 +14,7 @@ object FrontendRemoteDeployWatchMain extends App
     val log = Logging(system.eventStream, "frontend-remote-watch")
     implicit val requestTimeout = configuredRequestTimeout(config)
     implicit def executionContext = system.dispatcher
-    def createBoxOffice: ActorRef = {
+    def createBoxOffice(): ActorRef = {
       system.actorOf(
         RemoteBoxOfficeForwarder.props, 
         RemoteBoxOfficeForwarder.name

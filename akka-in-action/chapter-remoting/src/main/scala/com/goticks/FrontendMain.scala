@@ -25,7 +25,7 @@ object FrontendMain extends App
       s"$protocol://$systemName@$host:$port/$actorName"
     }
 
-    def createBoxOffice: ActorRef = {
+    def createBoxOffice(): ActorRef = {
       val path = createPath()
       system.actorOf(Props(new RemoteLookupProxy(path)), "lookupBoxOffice")
     }

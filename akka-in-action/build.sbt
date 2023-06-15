@@ -22,3 +22,5 @@ lazy val remoting    = project.in(file("chapter-remoting"))
 
 lazy val structure   = project.in(file("chapter-structure"))
 
+lazy val fault       = project.in(file("chapter-fault-tolerance"))
+

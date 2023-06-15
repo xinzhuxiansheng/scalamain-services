@@ -14,7 +14,7 @@ object SingleNodeMain extends App
     val log = Logging(system.eventStream, "go-ticks")
     implicit val requestTimeout = configuredRequestTimeout(config)
     implicit def executionContext = system.dispatcher
-    def createBoxOffice: ActorRef = system.actorOf(BoxOffice.props, BoxOffice.name)
+    def createBoxOffice(): ActorRef = system.actorOf(BoxOffice.props, BoxOffice.name)
   }
 
   startup(api.routes)

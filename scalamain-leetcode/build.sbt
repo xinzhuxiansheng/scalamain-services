@@ -7,6 +7,7 @@ lazy val root = (project in file("."))
     name := "scalamain-leetcode"
   )
 
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.2.16" % "test"
 
 // 编译Java源代码的设置
 javacOptions ++= Seq("-source", "11", "-target", "11")
