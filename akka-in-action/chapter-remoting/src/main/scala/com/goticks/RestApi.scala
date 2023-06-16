@@ -15,7 +15,8 @@ import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server._
 
 trait RestApi extends BoxOfficeApi
-    with EventMarshalling {
+  with EventMarshalling {
+
   import StatusCodes._
 
   def routes: Route = eventsRoute ~ eventRoute ~ ticketsRoute
@@ -31,6 +32,7 @@ trait RestApi extends BoxOfficeApi
         }
       }
     }
+
   def eventRoute =
     pathPrefix("events" / Segment) { event =>
       pathEndOrSingleSlash {
@@ -45,18 +47,18 @@ trait RestApi extends BoxOfficeApi
             }
           }
         } ~
-        get {
-          // GET /events/:event
-          onSuccess(getEvent(event)) {
-            _.fold(complete(NotFound))(e => complete(OK, e))
+          get {
+            // GET /events/:event
+            onSuccess(getEvent(event)) {
+              _.fold(complete(NotFound))(e => complete(OK, e))
+            }
+          } ~
+          delete {
+            // DELETE /events/:event
+            onSuccess(cancelEvent(event)) {
+              _.fold(complete(NotFound))(e => complete(OK, e))
+            }
           }
-        } ~
-        delete {
-          // DELETE /events/:event
-          onSuccess(cancelEvent(event)) {
-            _.fold(complete(NotFound))(e => complete(OK, e))
-          }
-        }
       }
     }
 
@@ -67,7 +69,7 @@ trait RestApi extends BoxOfficeApi
           // POST /events/:event/tickets
           entity(as[TicketRequest]) { request =>
             onSuccess(requestTickets(event, request.tickets)) { tickets =>
-              if(tickets.entries.isEmpty) complete(NotFound)
+              if (tickets.entries.isEmpty) complete(NotFound)
               else complete(Created, tickets)
             }
           }
@@ -77,11 +79,15 @@ trait RestApi extends BoxOfficeApi
 }
 
 trait BoxOfficeApi {
+
   import BoxOffice._
+
   def log: LoggingAdapter
+
   def createBoxOffice(): ActorRef
 
   implicit def executionContext: ExecutionContext
+
   implicit def requestTimeout: Timeout
 
   lazy val boxOffice = createBoxOffice()
@@ -92,8 +98,10 @@ trait BoxOfficeApi {
       .mapTo[EventResponse]
   }
 
-  def getEvents() =
+  def getEvents() = {
+    println(boxOffice)
     boxOffice.ask(GetEvents).mapTo[Events]
+  }
 
   def getEvent(event: String) =
     boxOffice.ask(GetEvent(event))
