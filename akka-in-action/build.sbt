@@ -24,3 +24,4 @@ lazy val structure   = project.in(file("chapter-structure"))
 
 lazy val fault       = project.in(file("chapter-fault-tolerance"))
 
+lazy val routing     = project.in(file("chapter-routing"))
